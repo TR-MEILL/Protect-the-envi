@@ -128,4 +128,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 参考地址/
+/新建文件夹/
 *.key

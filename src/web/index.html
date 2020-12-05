@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../linkjs/vue.js"></script>
+</head>
+<style>
+    #map{
+        background-color: aquamarine;
+        height: 600px;
+        width: 800px;
+        margin-left: auto;
+        margin-top: 10%;
+        margin-bottom: auto;
+        margin-right: auto;
+    }
+</style>
+<body>
+    
+    <div id="map" @click="clickx" >{{msg}}</div>
+
+    <script>
+        const app = new Vue({
+            el:'#map' ,
+            data:{
+                msg:'pppp'
+            },
+            methods:{
+                clickx(){
+                    alert(this.msg);
+                }
+            }
+
+        })
+
+    </script>
+</body>
+</html>
