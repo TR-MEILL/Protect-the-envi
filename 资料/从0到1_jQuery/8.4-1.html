@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+        div{ width:300px;}
+        h3
+        {
+            text-align:center;
+            padding:10px;
+            background-color:#EEEEEE;
+        }
+        h3:hover
+        {
+            background-color:#DDDDDD;
+            cursor:pointer;
+        }
+        p
+        {
+            background-color:#F1F1F1;
+            padding:8px;
+            line-height:24px;
+            display:none;
+        }
+    </style>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            //设置一个变量flag用于标记元素状态，是“滑下”还是“滑上”
+            var flag = 0;
+            $("h3").click(function () {
+                if (flag == 0) {
+                    $("p").slideDown();
+                    flag = 1;
+                }
+                else {
+                    $("p").slideUp();
+                    flag = 0;
+                }
+            });
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <h3>绿叶学习网简介</h3>
+        <p>绿叶学习网成立于2015年4月1日，是一个富有活力的Web技术学习网站。在这里，我们只提供互联网专业的Web技术教程和愉悦的学习体验。每一个教程、每一篇文章、甚至每一个知识点，都体现绿叶精益求精的态度。没有最好，但是我们可以做到更好！</p>
+    </div>
+</body>
+</html>

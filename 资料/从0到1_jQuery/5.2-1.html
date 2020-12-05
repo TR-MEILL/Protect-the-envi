@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        p{font-weight:bold;}
+    </style>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            $("#btn").click(function () {
+                var result = $("p").css("font-weight");
+                alert("font-weight取值为：" + result);
+            });
+        })
+    </script>
+</head>
+<body>
+    <p>绿叶学习网</p>
+    <input id="btn" type="button" value="获取" />
+</body>
+</html>

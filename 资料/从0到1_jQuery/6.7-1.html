@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+        body{height:1800px;}
+        #box1,#box2
+        {
+            display:inline-block;
+            width:100px;
+            height:100px;
+        }
+        #box1
+        {
+            background-color:Red;
+        }
+        #box2
+        {
+            background-color:Orange;
+            position:fixed;
+        }
+    </style>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            //获取box2距离顶部的距离
+            var top = $("#box2").offset().top;
+            //根据滚动距离判断定位
+            $(window).scroll(function () {
+                //当滚动条距离大于box2距离顶部的距离时，设置固定定位
+                if ($(this).scrollTop() > top) {
+                    $("#box2").css({ "position": "fixed", "top": "0" });
+                }
+                //当滚动条距离小于box2距离顶部的距离时，设置相对定位
+                else {
+                    $("#box2").css({ "position": "relative" });
+                }
+            });
+        })
+    </script>
+</head>
+<body>
+    <div id="box1"></div><br />
+    <div id="box2"></div>
+</body>
+</html>

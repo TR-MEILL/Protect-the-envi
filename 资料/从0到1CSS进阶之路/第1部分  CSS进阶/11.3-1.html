@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html> 
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+        table{border-collapse:collapse;}
+        table,tr,th,td{border:1px solid silver;}
+        caption{font-weight:bold;margin-bottom:5px;}
+        th
+        {
+            padding:3px;
+            width:80px;
+            font:微软雅黑 normal 14px/20px;
+            font-weight:normal;
+            background-color:#F1F1F1;
+        }
+        .chrome,.firefox,.ie,.opera,.safari
+        {
+            background: url(img/sprite.png) no-repeat;
+            height:30px;
+            padding-left:30px;
+        }
+        .chrome { background-position: -0px -0px; }
+        .firefox { background-position: -0px -30px; }
+        .ie { background-position: -0px -60px;}
+        .opera { background-position: -0px -90px;}
+        .safari { background-position: -0px -120px; }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>border-radius的浏览器支持情况</caption>
+        <thead>
+            <tr>
+                <th>Chrome</th>
+                <th>Firefox</th>
+                <th>IE</th>
+                <th>Opera</th>
+                <th>Safari</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="chrome"></td>
+                <td class="firefox"></td>
+                <td class="ie"></td>
+                <td class="opera"></td>
+                <td class="safari"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

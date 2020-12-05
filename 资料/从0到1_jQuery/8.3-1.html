@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            $("#btn_hide").click(function () {
+                $("img").fadeOut();
+            })
+            $("#btn_show").click(function () {
+                $("img").fadeIn();
+            })
+        })
+    </script>
+</head>
+<body>
+    <input id="btn_hide" type="button" value="淡出" />
+    <input id="btn_show" type="button" value="淡入" /><br/>
+    <img src="img/jquery.png" alt=""/>
+</body>
+</html>

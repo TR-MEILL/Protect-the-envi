@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        input{margin-bottom: 6px;}
+    </style>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            //添加事件
+            $("#btn").on("click", function () {
+                alert("绿叶，给你初恋般的感觉")
+            })
+            //解绑事件
+            $("#btn_off").click(function () {
+                $("#btn").off("click");
+            });
+        })
+    </script>
+</head>
+<body>
+    <input id="btn" type="button" value="按钮"><br/>
+    <input id="btn_off" type="button" value="解除"/>
+</body>
+</html>

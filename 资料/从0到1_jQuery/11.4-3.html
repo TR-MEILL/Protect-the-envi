@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        function test() {
+            var arr = $.makeArray(arguments);
+            console.log(arr);
+        }
+        test("yes", 1, {});      // ["yes", 1, Object]
+    </script>
+</head>
+<body>
+</body>
+</html>

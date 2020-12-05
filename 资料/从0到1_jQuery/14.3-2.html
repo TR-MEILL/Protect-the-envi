@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            var $li = $("li");               //获取jQuery对象
+            var oLi = $("li").get();         //转换为DOM对象
+            oLi.reverse();                   //调用数组方法，颠倒元素顺序
+            $("ul").html(oLi);               //插入元素
+        })
+    </script>
+</head>
+<body>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+</body>
+</html>

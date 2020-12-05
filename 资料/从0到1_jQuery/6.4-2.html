@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            //定义一个变量，保存正则表达式
+            var myregex = /^[0-9]*$/;
+            $("#txt").keydown(function () {
+                var value = $(this).val();
+                //判断是否输入为数字
+                if (myregex.test(value)) {
+                    $("div").text("输入正确");
+                } else {
+                    $("div").text("必须输入数字");
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <input id="txt" type="text" />
+    <div style="color:red;"></div>
+</body>
+</html>

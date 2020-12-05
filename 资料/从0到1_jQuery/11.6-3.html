@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function isArr(o) {
+            return Object.prototype.toString.call(o) == "[object Array]";
+        }
+        var a = ["HTML", "CSS", "JavaScript"];
+        console.log(isArr(a));    //true
+        var b = { name: "helicopter", age: 25 };
+        console.log(isArr(b));    //false
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            var parents = $("span").parentsUntil("div");
+            var result = [];
+
+            $.each(parents, function () {
+                var item = this.tagName.toLowerCase();
+                result.push(item);
+            });
+
+            console.log(result.join(","));
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <p>
+            <strong>
+                <span>绿叶学习网</span>
+            </strong>
+        </p>
+    </div>
+</body>
+</html>

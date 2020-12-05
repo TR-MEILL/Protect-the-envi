@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/message_zh.min.js"></script>
+    <script>
+        $(function () {
+            $("#myform").validate({
+                //自定义验证规则
+                rules: {
+                    myname: { required: true, maxlength: 6 },
+                    myemail: { required: true, email: true }
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <form id="myform" method="post">
+        <p><label>账号：<input id="myname" name="myname" type="text" required/></label></p>
+        <p><label>邮箱：<input id="myemail" name="myemail" type="email" required/></label></p>
+        <input type="submit" value="提交">
+    </form>
+</body>
+</html>

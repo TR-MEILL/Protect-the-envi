@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            $("#btn").on("delay", function () {
+                setTimeout(function () {
+                    alert("欢迎来到绿叶学习网！")
+                }, 1000)
+            })
+            $("#btn").click(function () {
+                $("#btn").trigger("delay");
+            })
+        })
+    </script>
+</head>
+<body>
+    <input id="btn" type="button" value="按钮" />
+</body>
+</html>

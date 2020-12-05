@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+        .select
+        {
+            color:red;
+            background-color:silver;
+            font-weight:bold;
+        }
+    </style>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            $("#btn_add").click(function () {
+                $("li:nth-child(odd)").addClass("select");
+            });
+            $("#btn_remove").click(function () {
+                $("li:nth-child(odd)").removeClass("select");
+            });
+        })
+    </script>
+</head>
+<body>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>jQuery</li>
+        <li>Vue.js</li>
+    </ul>
+    <input id="btn_add" type="button" value="添加" />
+    <input id="btn_remove" type="button" value="删除" />
+</body>
+</html>

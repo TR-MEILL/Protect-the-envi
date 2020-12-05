@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+        *{padding:0;margin:0;}
+        ul{list-style-type:none;}
+        li{height:20px;}
+    </style>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            $("ul li:first-child").css("background-color", "red");
+            $("ul li:nth-child(2)").css("background-color", "orange");
+            $("ul li:nth-child(3)").css("background-color", "yellow");
+            $("ul li:nth-child(4)").css("background-color", "green");
+            $("ul li:last-child").css("background-color", "blue");
+        })
+    </script>
+</head>
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>

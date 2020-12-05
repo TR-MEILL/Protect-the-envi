@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/jquery.zclip.min.js"></script>
+    <script>
+        $(function () {
+            $("#btn").zclip({
+                path: "js/ZeroClipboard.swf",
+                copy: function () {
+                    return $("#txt").val()
+                },
+                afterCopy: function () {
+                    alert("复制成功")
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <input id="txt" type="text" />
+    <input id="btn" type="button" value="复制"></input>
+</body>
+</html>

@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            $("select").change(function () {
+                var link = $(":selected").val();
+                window.open(link);
+            })
+        })
+    </script>
+</head>
+<body>
+    <select>
+        <option value="http://wwww.lvyestudy.com">绿叶学习网</option>
+        <option value="https://www.ptpress.com.cn">人邮官网</option>
+        <option value="https://www.epubit.com">异步社区</option>
+    </select>
+</body>
+</html>

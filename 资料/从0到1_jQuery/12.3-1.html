@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        //定义插件
+        (function () {
+            $.fn.extend({
+                //插件名为“changeColor”，有两个参数：fgcolor、bgcolor
+                "changeColor": function (fgcolor, bgcolor) {
+                    //定义鼠标移入移出效果
+                    $(this).mouseover(function () {
+                        $(this).css({ "color": fgcolor, "background": bgcolor });
+                    }).mouseout(function () {
+                        $(this).css({ "color": "black", "background": "white" });
+                    });
+                    //返回jQuery对象，以便链式调用
+                    return $(this);
+                }
+            })
+        })(jQuery);
+    </script>
+    <script>
+        $(function () {
+            //调用插件
+            $("h1").changeColor("red", "#F1F1F1")
+        })
+    </script>
+</head>
+<body>
+    <h1>绿叶学习网</h1>
+</body>
+</html>

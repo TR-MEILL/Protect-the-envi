@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="js/prototype.min.js"></script>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        jQuery.noConflict();
+        //这里之后可以把“$”交给prototype库使用
+    </script>
+    <script>
+        (function ($) {
+            $(function () {
+                $("div").html("<strong>绿叶学习网</strong>");
+            })
+        })(jQuery)
+    </script>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

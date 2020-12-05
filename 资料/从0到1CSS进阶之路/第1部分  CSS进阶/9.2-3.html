@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html> 
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+        #wrapper
+        {
+            display:inline-block;
+            position:relative;
+            padding:20px 30px;
+            margin-top:100px;
+            border:1px solid gray;
+            border-radius:10px;/*添加圆角效果*/
+            font-size:14px;
+            font-weight:bold;
+            text-align:center;
+            background-color:#BBFFEE;
+        }
+        /*外层三角形*/
+        #triangle
+        {
+            position:absolute;
+            top:-30px;
+            /*left:50%和margin-left:-15px是为了实现三角形的水平居中*/
+            left:50%;
+            margin-left:-15px;
+            width:0;
+            height:0;
+            border-width:15px;
+            border-style:solid;
+            border-color:transparent transparent black transparent;
+        }
+        /*内层三角形*/
+        #triangle div
+        {
+            position:absolute;
+            top:-13px;
+            left:-14px;
+            width:0;
+            height:0;
+            border-width:14px;
+            border-style:solid;
+            border-color:transparent transparent #BBFFEE transparent;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="triangle"><div></div></div>
+        欢迎来到绿叶学习网
+    </div>
+</body>
+</html>

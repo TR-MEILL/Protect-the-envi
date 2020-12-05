@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            var flag = true;
+            $("#btn").click(function () {
+                if (flag) {
+                    $("#pic").attr("src", "img/2.png");
+                    flag = false;
+                } else {
+                    $("#pic").attr("src", "img/1.png");
+                    flag = true;
+                }
+            });
+        })
+    </script>
+</head>
+<body>
+    <input id="btn" type="button" value="修改" /><br/>
+    <img id="pic" src="img/1.png" />
+</body>
+</html>

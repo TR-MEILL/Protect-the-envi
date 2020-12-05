@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+        div
+        {
+            width:50px;
+            height:50px;
+            background-color:lightskyblue;
+        }
+    </style>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/jquery.color.js"></script>
+    <script>
+        $(function () {
+            $("#btn-start").click(function () {
+                $("div").animate({ "width": "200px" }, 2000)
+                      .animate({ "background-color": "red" }, 2000)
+                      .animate({ "height": "200px" }, 2000)
+                      .animate({ "background-color": "blue" }, 2000);
+            });
+            $("#btn-stop").click(function () {
+                $("div").stop();
+            })
+        })
+    </script>
+</head>
+<body>
+    <input id="btn-start" type="button" value="开始" />
+    <input id="btn-stop" type="button" value="停止" /><br />
+    <div></div>
+</body>
+</html>

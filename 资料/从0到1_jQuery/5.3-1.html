@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            $("#btn").click(function () {
+                var result = $("div").html();
+                alert(result);
+            });
+        })
+    </script>
+</head>
+<body>
+    <div>绿叶学习网<strong>jQuery教程</strong></div>
+    <input id="btn" type="button" value="获取" />
+</body>
+</html>

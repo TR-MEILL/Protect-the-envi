@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            $("#txt1").select(function () {
+                alert("你选中了单行文本框中的内容")
+            })
+            $("#txt2").select(function () {
+                alert("你选中了多行文本框中的内容")
+            })
+        })
+    </script>
+</head>
+<body>
+    <input id="txt1" type="text" value="绿叶学习网，给你初恋般的感觉"/><br />
+    <textarea id="txt2" cols="20" rows="5">绿叶学习网，给你初恋般的感觉</textarea>
+</body>
+</html>

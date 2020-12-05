@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            $("#btn").click(function(){
+                $.getJSON("info.json", function (data) {
+                    //定义一个变量，用于保存结果
+                    var str="";
+                        $.each(data,function(index,info){
+                            str += "姓名：" + info["name"] +"<br/>";
+                            str += "性别：" + info["sex"] + "<br/>";
+                            str += "年龄：" + info["age"] + "<br/>";
+                            str += "<hr/>";
+                        })
+                    //插入数据
+                    $("div").html(str);
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <input id="btn" type="button" value="获取数据" style="margin-bottom:8px;"/>
+    <div></div>
+</body>
+</html>

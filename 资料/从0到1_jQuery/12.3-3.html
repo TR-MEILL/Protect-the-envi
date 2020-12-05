@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        //定义插件
+        (function () {
+            $.fn.extend({
+                "color": function (options) {
+                    //设置参数的默认值
+                    var defaults = {
+                        fgcolor: "hotpink",
+                        bgcolor: "lightskyblue"
+                    };
+                    var options = $.extend(defaults, options);
+
+                    $(this).mouseover(function () {
+                        $(this).css({ "color": options.fgcolor, "background": options.bgcolor });
+                    }).mouseout(function () {
+                        $(this).css({ "color": "black", "background": "white" });
+                    });
+
+                    return $(this);
+                }
+            })
+        })(jQuery);
+    </script>
+    <script>
+        $(function () {
+            //调用插件
+            $("h1").color();
+        })
+    </script>
+</head>
+<body>
+    <h1>绿叶学习网</h1>
+</body>
+</html>

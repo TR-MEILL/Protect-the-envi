@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            $("#txt").keyup(function () {
+                var str = $(this).val();
+                $("#num").text(str.length);
+            })
+        })
+    </script>
+</head>
+<body>
+    <input id="txt" type="text" />
+    <div>
+        字符串长度为：
+        <span id="num">0</span>
+    </div>
+</body>
+</html>

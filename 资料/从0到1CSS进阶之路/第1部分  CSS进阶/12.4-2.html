@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html> 
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+        #wrapper
+        {
+            width:200px;
+            border:1px solid gray;
+            overflow:hidden;         /*创建一个BFC*/
+        }
+        #bfc-box
+        {
+            overflow:hidden;         /*创建一个BFC，避免外边距叠加*/
+        }
+        #a,#b
+        {
+            height:60px;
+            line-height:60px;
+            text-align:center;
+            font-size:30px;
+            color:White;
+            background-color:Purple;
+        }
+        #a{margin-bottom:20px;}
+        #b{margin-top:30px;}
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="a">A</div>
+        <div id="bfc-box">
+            <div id="b">B</div>
+        </div>
+    </div>
+</body>
+</html>

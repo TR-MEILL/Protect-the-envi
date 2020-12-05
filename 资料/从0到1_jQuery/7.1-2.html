@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            //动态创建元素
+            var $btn = $('<input id="btn" type="button" value="按钮">');
+            $($btn).appendTo("body");
+
+            //绑定事件
+            $("#btn").on("click", function () {
+                alert("绿叶，给你初恋般的感觉")
+            })
+        })
+    </script>
+</head>
+<body>
+</body>
+</html>

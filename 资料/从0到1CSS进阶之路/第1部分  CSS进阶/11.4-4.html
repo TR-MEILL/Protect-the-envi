@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html> 
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+	<style type="text/css">
+	    @font-face
+	    {
+		    font-family: "myfont";
+		    src: url("fonts/iconfont.eot");
+		    src: url("fonts/iconfont.eot?#iefix") format("embedded-opentype"),
+			    url("fonts/iconfont.woff") format("woff"),
+			    url("fonts/iconfont.ttf") format("truetype"),
+			    url("fonts/iconfont.svg") format("svg");
+	    }
+        .iconfont
+        {
+            font-family:"myfont" !important;
+            font-style:normal;
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-stroke-width: 0.2px;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        ul
+        {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        li
+        {
+            width:240px;
+            height:32px;
+            line-height:32px;
+            font-family: "微软雅黑";
+            font-size:14px;
+            overflow: hidden;     /*清除浮动*/
+        }
+        /*定义两个li之间有一条边框*/
+        li+li{border-top:1px dashed silver;}
+        i,span{float:left;color:#333333;}
+        i{font-size:16px;margin-left:10px;margin-right:10px;}
+        /*使用CSS3子元素选择器*/
+        li:nth-child(1) i{color:#A8E957;}
+        li:nth-child(2) i{color:#8DCFFB;}
+        li:nth-child(3) i{color:#FFCB96;}
+        li:nth-child(4) i{color:#FFC2D8;}
+        li:nth-child(5) i{color:#86F5F0;}
+        li:nth-child(6) i{color:#E4B6FF;}
+        li:nth-child(7) i{color:#91ECFA;}
+        li:nth-child(8) i{color:#FF9595;}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>
+            <i class="iconfont">&#xe777;</i>
+            <span>HTML5参考手册</span>
+        </li>
+		<li>
+            <i class="iconfont">&#xe777;</i>
+            <span>CSS3参考手册</span>
+        </li>
+		<li>
+            <i class="iconfont">&#xe777;</i>
+            <span>JavaScript参考手册</span>
+        </li>
+		<li>
+            <i class="iconfont">&#xe777;</i>
+            <span>jQuery参考手册</span>
+        </li>
+		<li>
+            <i class="iconfont">&#xe777;</i>
+            <span>Bootstrap参考手册</span>
+        </li>
+		<li>
+            <i class="iconfont">&#xe777;</i>
+            <span>Python参考手册</span>
+        </li>
+	</ul>
+</body>
+</html>

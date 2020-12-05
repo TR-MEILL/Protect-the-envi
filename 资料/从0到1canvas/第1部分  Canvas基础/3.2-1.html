@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script type="text/javascript">
+        function $$(id) {
+            return document.getElementById(id);
+        }
+        window.onload = function () {
+            var cnv = $$("canvas");
+            var cxt = cnv.getContext("2d");
+            //半圆  只是状态描述，后面不描边是看不出来的
+            cxt.beginPath();
+            cxt.arc(80, 80, 50, 0, 180 * Math.PI / 180, true);/*true——逆时针方向画*/
+            cxt.closePath();  //不写这句就不会把圆封闭起来，可以试试注释掉
+            //描边
+            cxt.strokeStyle ="HotPink";
+            cxt.stroke();  //stroke——轻触
+            //整圆
+            cxt.beginPath();
+            cxt.arc(120, 80, 40, 0, 360 * Math.PI / 180, true);
+            cxt.closePath();
+            //描边
+            cxt.strokeStyle = "HotPink";
+            cxt.stroke();
+            //看看true与false的区别
+            cxt.beginPath();
+            cxt.arc(150, 150, 30, 0, -90 * Math.PI / 180, true);
+            cxt.closePath();
+            cxt.strokeStyle = "HotPink";
+            cxt.stroke();
+            //整圆
+            cxt.beginPath();
+            cxt.arc(200, 200, 30, 0, -90 * Math.PI / 180, false);
+            cxt.closePath();
+            cxt.strokeStyle = "HotPink";
+            cxt.stroke();
+        }
+    </script>
+</head>
+<body>
+    <canvas id="canvas" width="500" height="450" style="border:1px dashed gray;"></canvas>
+</body>
+</html>

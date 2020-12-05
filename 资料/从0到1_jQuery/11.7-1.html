@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        (function ($) {
+            $.extend({
+                "maxNum": function (m, n) {
+                    return (m > n) ? m : n;
+                }
+            });
+        })(jQuery);
+        $(function () {
+            var result = $.maxNum(10, 5)
+            console.log("最大值是：" + result);
+        })
+    </script>
+</head>
+<body>
+</body>
+</html>
