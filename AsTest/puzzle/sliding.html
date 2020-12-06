@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+  <title>平图</title>
+  <style>
+  .picture {
+    border: 1px solid black;
+  }
+  </style>
+</head>
+<body>
+  <div id="title">
+    <h2>平图Ϸ</h2>
+  </div>
+  <div id="slider">
+    <form>
+      <label>容易</label>
+      <input type="range" id="scale" value="2" min="2" max="100" step="1">
+      <label>困难</label>
+    </form>
+    <br>
+  </div>
+  <div id="main" class="main">
+    <canvas id="puzzle" width="654px" height="640px"></canvas>
+  </div>
+  <script src="sliding.js"></script>
+</body>
+</html>
