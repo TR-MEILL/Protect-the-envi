@@ -42,7 +42,7 @@
     
     <div id="map"  >
         <div v-for="p in blocks" class="son" :class="{'disp':dispindex === p}" @click="clickx(p)">
-            <img src="../img/Pumpkin.png"  :class="{'imgx':isimgx}">{{p}}
+            <a :href="url[p-1]" target="_blank"><img src="../img/Pumpkin.png"  :class="{'imgx':isimgx}"></a>{{p}}
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/4.0.1/math.min.js"></script>
@@ -54,6 +54,7 @@
                 dispindex:16,
                 isimgx:true,
                 blocks:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16],
+                url:['../../参考地址/HTML5 Canvas拼图游戏puzzle/sliding.html','../../参考地址/html5万圣节卡片配对游戏源码/index.html','../../参考地址/仿切水果小游戏代码/index.html','../../参考地址/HTML5 Canvas拼图游戏puzzle/sliding.html','../../参考地址/HTML5 Canvas拼图游戏puzzle/sliding.html','../../参考地址/HTML5 Canvas拼图游戏puzzle/sliding.html','../../参考地址/HTML5 Canvas拼图游戏puzzle/sliding.html','../../参考地址/HTML5 Canvas拼图游戏puzzle/sliding.html','../../参考地址/HTML5 Canvas拼图游戏puzzle/sliding.html','../../参考地址/HTML5 Canvas拼图游戏puzzle/sliding.html','../../参考地址/HTML5 Canvas拼图游戏puzzle/sliding.html','../../参考地址/HTML5 Canvas拼图游戏puzzle/sliding.html','../../参考地址/HTML5 Canvas拼图游戏puzzle/sliding.html','../../参考地址/HTML5 Canvas拼图游戏puzzle/sliding.html','../../参考地址/HTML5 Canvas拼图游戏puzzle/sliding.html','../../参考地址/HTML5 Canvas拼图游戏puzzle/sliding.html','../../参考地址/HTML5 Canvas拼图游戏puzzle/sliding.html','../../参考地址/HTML5 Canvas拼图游戏puzzle/sliding.html',]
                 // nblock:[[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]
 
             },
@@ -74,5 +75,7 @@
         })
 
     </script>
+
+    <a href="../../参考地址/HTML5 Canvas拼图游戏puzzle/sliding.html"><img src="../img/Pumpkin.png" alt=""></a>
 </body>
 </html>
