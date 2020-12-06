@@ -12,26 +12,64 @@
         height: 600px;
         width: 800px;
         margin-left: auto;
-        margin-top: 10%;
+        margin-top: 5%;
         margin-bottom: auto;
         margin-right: auto;
+    }
+    .son {
+        height: 148px;
+        width: 198px;
+        background-color: rgb(212, 60, 60);
+        float: left;
+        margin-right: 2px;
+        margin-bottom: 2px;
+    }
+    .son:hover{
+        background-color: blue;
+    }
+    .imgx{
+        position: fixed;
+        margin-left: auto;
+        margin-right: auto;
+        width: 198px;
+        height: 148px;
+    }
+    .disp{
+        visibility: hidden;
     }
 </style>
 <body>
     
-    <div id="map" @click="clickx" >{{msg}}</div>
-
+    <div id="map"  >
+        <div v-for="p in blocks" class="son" :class="{'disp':dispindex === p}" @click="clickx(p)">
+            <img src="../img/Pumpkin.png"  :class="{'imgx':isimgx}">{{p}}
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/4.0.1/math.min.js"></script>
     <script>
         const app = new Vue({
             el:'#map' ,
             data:{
-                msg:'pppp'
+                msg:' ',
+                dispindex:16,
+                isimgx:true,
+                blocks:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16],
+                // nblock:[[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]
+
+            },
+            computed:{
+
             },
             methods:{
-                clickx(){
-                    alert(this.msg);
+                clickx(index){
+                    if( math.abs(this.dispindex - index) == 4 || math.abs(this.dispindex - index) == 1)
+                        if(((this.dispindex % 4 == 0 && this.dispindex < index) || ((this.dispindex-1) % 4 == 0 && this.dispindex > index))&& math.abs(this.dispindex - index) == 1)
+                            this.dispindex = this.dispindex;
+                        else   
+                            this.dispindex = index;
                 }
-            }
+            },
+            
 
         })
 
